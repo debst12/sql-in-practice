@@ -1,0 +1,56 @@
+-- SELECT *
+-- FROM invoice
+-- WHERE invoice_id IN (
+--   SELECT invoice_id
+--   FROM invoice_line WHERE unit_price < .99
+--   );
+
+-- SELECT playlist_track_id, t.name
+-- FROM playlist_track
+-- JOIN track t
+-- ON playlist_track.track_id = t.track_id
+-- WHERE playlist_id IN (
+--   SELECT playlist_id 
+--   FROM playlist
+--   WHERE name = 'Music'
+--   );
+
+-- SELECT t.name, pl.playlist_id
+-- FROM track t
+-- JOIN playlist_track plt
+-- ON t.track_id = plt.track_id
+-- JOIN playlist pl
+-- ON plt.playlist_id = pl.playlist_id
+-- WHERE pl.playlist_id IN (
+--   SELECT playlist_id
+--   FROM playlist
+--   WHERE playlist_id = 5
+--   );
+
+-- SELECT name
+-- FROM track
+-- WHERE genre_id IN (
+--   SELECT genre_id
+--   FROM genre
+--   WHERE name = 'Comedy'
+-- );
+
+-- SELECT name
+-- FROM track
+-- WHERE album_id IN(
+--   SELECT album_id
+--   FROM album
+--   WHERE title = 'Fireball'
+--   );
+
+-- SELECT name
+-- FROM track
+-- WHERE album_id IN (
+--   SELECT album_id
+--   FROM album
+--   WHERE artist_id IN (
+--     SELECT artist_ID
+--     FROM artist
+--     WHERE name = 'Queen'
+--     )
+--   );
